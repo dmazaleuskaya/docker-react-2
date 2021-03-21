@@ -1,5 +1,14 @@
+language: generic
+# grants super user permission
 sudo: required
+# we need docker pre-installed
 services:
   - docker
+
+# steps that should be done before testing/deploying a project
 before_install: 
   - docker build -t dmazaleuskaya/docker-react -f Dockerfile.dev .
+
+# -e  CI=true - requirement of Jest, needed so that tests are run once, without launching the watcher
+script:
+  - docker run - CI=true dmazaleuskaya/docker-react npm run test
