@@ -11,4 +11,4 @@ before_install:
 
 # -e  CI=true - requirement of Jest, needed so that tests are run once, without launching the watcher
 script:
-  - docker run - CI=true dmazaleuskaya/docker-react npm run test
+  - docker run -e CI=true dmazaleuskaya/docker-react npm run test
