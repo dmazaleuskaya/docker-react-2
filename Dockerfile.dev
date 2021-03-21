@@ -1,0 +1,11 @@
+FROM node:alpine
+
+WORKDIR '/app'
+
+COPY package.json .
+RUN npm install
+
+# not necessary while 'volumes' are used to create references to local folders
+COPY . . 
+
+CMD ["npm", "run", "start"]
