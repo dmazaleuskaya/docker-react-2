@@ -10,5 +10,8 @@ RUN npm run build
 
 # RUN phase
 FROM nginx
+
+# mostly for the elasticbeanstalk 
+EXPOSE 80
 # specify the phase from which to copy
 COPY --from=builder /app/build /usr/share/nginx/html

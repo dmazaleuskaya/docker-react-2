@@ -13,10 +13,10 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2" # from the url
-  name: "docker-react"
-  env: "Dockerreact-env"
+  name: "docker-react-2"
+  env: "Dockerreact2-env"
   bucket_name: "elasticbeanstalk-us-east-2-293336336377"
-  bucket_path: "docker-react"
+  bucket_path: "docker-react-2"
   # deploy only when smth is merged into master
   on:
     branch: master
