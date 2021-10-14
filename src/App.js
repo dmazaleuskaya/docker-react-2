@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>I'm here not to learn react. I'm here to learn docker. Now I try docker-compose</p>
+        <p>I'm here not to learn react. I'm here to learn docker.</p>
       </header>
     </div>
   );
